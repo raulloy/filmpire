@@ -63,5 +63,16 @@ module.exports = {
         aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+        optionalDependencies: false,
+        peerDependencies: false,
+        packageDir: './',
+        // Add an exception for @mui/material package
+        dependencies: ['@mui/material'],
+      },
+    ],
   },
 };
